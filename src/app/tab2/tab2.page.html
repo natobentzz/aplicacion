@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DENSIDAD
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <ion-item>
+    <ion-label position="floating">Velocidad del Viento</ion-label>
+    <ion-input type="number" name="Velocidad" [(ngModel)]=this.velocidad></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Longitud de pala</ion-label>
+    <ion-input type="number" name="longitud" [(ngModel)]=this.longitud ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Coeficiente de potencia</ion-label>
+    <ion-input type="number" name="coeficiente"  [(ngModel)]=this.coeficiente></ion-input>
+  </ion-item>
+  
+  </ion-list> 
+
+    <ion-label position="stacked">Superficie del rotor</ion-label>
+    <ion-textarea clearOnEdit="true">{{this.superficie}}</ion-textarea>
+  
+  <ion-button color="success" expand="block" (click)="calcular()" (ionChange)="calcular()">Calcular</ion-button>
+  
+  <p>
+  <ion-grid> 
+    <ion-row>
+      <ion-col size="5" style = "border: solid 1px #000000">
+    Densidad del Aire (Kg/m³)
+         </ion-col>
+      <ion-col style = "border: solid 1px #000000">
+        0.87
+      </ion-col>
+        <ion-col style = "border: solid 1px #000000">
+          1
+           </ion-col>
+          <ion-col style = "border: solid 1px #000000">
+            1.2
+             </ion-col>
+            <ion-col style = "border: solid 1px #000000">
+              1.42
+               </ion-col>
+  </ion-row> 
+  
+  <ion-row>
+     <ion-col size="5" style = "border: solid 1px #000000">
+    Potencia disponible del Viento (KW)
+     </ion-col>
+     <ion-col style = "border: solid 1px #000000">
+    </ion-col>
+   <ion-col style = "border: solid 1px #000000">
+      </ion-col>
+     <ion-col style = "border: solid 1px #000000">
+        </ion-col>
+       <ion-col style = "border: solid 1px #000000">
+          </ion-col>
+  </ion-row>
+  
+  <ion-row>
+     <ion-col size="5" style = "border: solid 1px #000000">
+    Potencia del Aerogeneador (KW)
+     </ion-col>
+     <ion-col style = "border: solid 1px #000000">
+    </ion-col>
+   <ion-col style = "border: solid 1px#000000">
+      </ion-col>
+     <ion-col style = "border: solid 1px #000000">
+        </ion-col>
+       <ion-col style = "border: solid 1px #000000">
+          </ion-col>
+  </ion-row> 
+  </ion-grid>
+</p>
+<p>
+  <ion-img src="../assets/img/2.2.png.png"></ion-img>
+</p>
+</ion-content>
