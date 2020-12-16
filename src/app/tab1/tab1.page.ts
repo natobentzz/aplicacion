@@ -18,6 +18,9 @@ export class Tab1Page {
   variable5: 25;
   pi = 3.1416;
 
+  //Variables tabla
+  a: number;
+
   constructor(private cd: ChangeDetectorRef) {}
 
   ngOnInit() {
@@ -26,6 +29,11 @@ export class Tab1Page {
 
   calcular(){
     this.superficie = Math.PI * Math.pow(this.longitud, 2);
+    
+  }
+
+  calcular1(){
+   this.a = 0.5 * this.densidad * this.superficie * Math.pow(this.variable1, 3) /1000;
     
   }
 }
