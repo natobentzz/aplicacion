@@ -37,16 +37,16 @@
     <ion-col style = "border: solid 1px #000000">
       5
        </ion-col>
-      <ion-col [(ngModel)]=this.variable2 style = "border: solid 1px #000000">
+      <ion-col  style = "border: solid 1px #000000">
         10
          </ion-col>
-        <ion-col [(ngModel)]=this.variable3 style = "border: solid 1px #000000">
+        <ion-col  style = "border: solid 1px #000000">
           15
            </ion-col>
-          <ion-col [(ngModel)]=this.variable4 style = "border: solid 1px #000000">
+          <ion-col  style = "border: solid 1px #000000">
             20
              </ion-col>
-             <ion-col [(ngModel)]=this.variable5 style = "border: solid 1px #000000">
+             <ion-col  style = "border: solid 1px #000000">
               25
                </ion-col>
 
@@ -57,9 +57,10 @@
   Potencia disponible del Viento (KW)
    </ion-col>
    <ion-col style = "border: solid 1px #000000">
-   {{this.a}}
+    {{this.a}}
   </ion-col>
  <ion-col style = "border: solid 1px #000000">
+    {{this.b}}
     </ion-col>
    <ion-col style = "border: solid 1px #000000">
       </ion-col>
@@ -87,7 +88,6 @@
 </ion-grid>
 </p>
 <p>
-  <ion-button color="success" expand="block" (click)="calcular1()" (ionChange)="calcular1()">Calcular</ion-button>
 </p>
 
 </ion-content>

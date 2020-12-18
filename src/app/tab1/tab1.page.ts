@@ -20,6 +20,7 @@ export class Tab1Page {
 
   //Variables tabla
   a: number;
+  b: number;
 
   constructor(private cd: ChangeDetectorRef) {}
 
@@ -29,11 +30,7 @@ export class Tab1Page {
 
   calcular(){
     this.superficie = Math.PI * Math.pow(this.longitud, 2);
-    
-  }
-
-  calcular1(){
-   this.a = 0.5 * this.densidad * this.superficie * Math.pow(this.variable1, 3) /1000;
-    
+    this.a = 0.5 * this.densidad;
+    this.b = 0.5 * this.densidad * this.superficie;
   }
 }
