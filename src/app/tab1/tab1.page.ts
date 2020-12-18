@@ -30,6 +30,7 @@ export class Tab1Page {
 
   calcular(){
     this.superficie = Math.PI * Math.pow(this.longitud, 2);
+    
     this.a = 0.5 * this.densidad;
     this.b = 0.5 * this.densidad * this.superficie;
   }
