@@ -11,10 +11,10 @@ export class Tab3Page implements OnInit {
   longitud: 1;
   velocidad: 1;
   superficie: number;
-  variable1: 10;
-  variable2: 20;
-  variable3: 30;
-  variable4: 40;
+  variable1: 0.1;
+  variable2: 0.2;
+  variable3: 0.3;
+  variable4: 0.4;
   pi = 3.1416;
 
   constructor(private cd: ChangeDetectorRef) {}
