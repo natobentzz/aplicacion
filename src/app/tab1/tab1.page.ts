@@ -24,6 +24,12 @@ export class Tab1Page {
   c: number;
   d: number;
   e: number;
+  
+  f: number;
+  g: number;
+  h: number;
+  i: number;
+  j: number;
 
   constructor(private cd: ChangeDetectorRef) {}
 
@@ -39,5 +45,11 @@ export class Tab1Page {
     this.c = 0.5 * this.densidad * this.superficie * Math.pow(15, 3)/1000;
     this.d = 0.5 * this.densidad * this.superficie * Math.pow(20, 3)/1000;
     this.e = 0.5 * this.densidad * this.superficie * Math.pow(25, 3)/1000;
+
+    this.f = this.a * this.coeficiente;
+    this.g = this.b * this.coeficiente;
+    this.h = this.c * this.coeficiente;
+    this.i = this.d * this.coeficiente;
+    this.j = this.e * this.coeficiente;
   }
 }
