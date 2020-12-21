@@ -14,7 +14,7 @@
         <ion-col size="4" style = "border: solid 1px #000000">
           
             <ion-label position="floating"> </ion-label>
-            <ion-input type="number" name="densidad" [(ngModel)]=this.densidad></ion-input>
+            <ion-input type="number" name="V" [(ngModel)]=V></ion-input>
           
            </ion-col>
           <ion-col size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
@@ -29,7 +29,7 @@
         <ion-col size="4" style = "border: solid 1px #000000">
 
             <ion-label position="floating"> </ion-label>
-            <ion-input type="number" name="densidad" [(ngModel)]=this.densidad></ion-input> 
+            <ion-input type="number" name="a" [(ngModel)]=this.a></ion-input> 
 
            </ion-col>
           <ion-col size="2" style="background-color: rgb(247, 210, 0); margin: 8px;">
@@ -43,7 +43,7 @@
            </ion-col>
         <ion-col size="4" style = "border: solid 1px #000000">
             <ion-label position="floating"> </ion-label>
-            <ion-input type="number" name="densidad" [(ngModel)]=this.densidad></ion-input>
+            <ion-input type="number" name="R" [(ngModel)]=this.R></ion-input>
            </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             m
@@ -55,7 +55,7 @@
           <font color="white">A =</font>
             </ion-col>
            <ion-col size="4" style="background-color: rgb(157, 214, 130); margin: 1px;">
-               
+            {{this.A}}
             </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             m²
@@ -64,7 +64,7 @@
 
   </ion-grid>
 
-
+  <ion-button color="success" expand="block" (click)="calcular()" (ionChange)="calcular()">Calcular</ion-button>
 
 <p>
   <ion-grid>
@@ -76,7 +76,7 @@
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.potenciaV}}
           </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             KW
@@ -90,13 +90,13 @@
   <ion-grid>
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(202, 224, 238); margin: 1px;">
-        <font color="black">MULTIPLICADOR</font>
+        <font color="black">ROTOR</font>
           </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.rotor}}
           </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             KW
@@ -126,13 +126,13 @@
   <ion-grid>
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(202, 224, 238); margin: 1px;">
-        <font color="black">ALTERNADOR</font>
+        <font color="black">MULTIPLICADOR</font>
           </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.multiplicador}}
           </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             KW
@@ -146,13 +146,13 @@
   <ion-grid>
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(202, 224, 238); margin: 1px;">
-        <font color="black">ROTOR</font>
+        <font color="black">ALTERNADOR</font>
           </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.alternador}}
           </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             KW
@@ -172,7 +172,7 @@
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.transformador}}
           </ion-col>
           <ion-col  size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             KW
@@ -192,9 +192,10 @@
 
     <ion-row>
       <ion-col  size="5" style="background-color: rgb(157, 214, 130); margin: 1px;">
-        
+        {{this.rendimiento}}
           </ion-col>
-          <ion-col  size="1.2" style="background-color: rgb(255, 255, 255); margin: 15px;">
+          <ion-col   size="0.7" style="background-color: rgb(247, 210, 0); margin: 8px;">
+            %
               </ion-col>
        </ion-row>
   </ion-grid>
