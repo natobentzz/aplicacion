@@ -6,7 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content padding>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary" href="#" onclick="window.open('https://www.weather.com/', '_system', 'location=yes');">
+      <ion-icon name="partly-sunny"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
   <ion-list>
   <ion-item>
     <ion-label position="floating">Densidad del aire</ion-label>
@@ -24,14 +33,14 @@
   </ion-list> 
   
     <ion-label position="stacked">Superficie del rotor</ion-label>
-    <ion-textarea clearOnEdit="true">{{this.superficie}}</ion-textarea>
+    <ion-textarea clearOnEdit="true">{{this.superficieround}}</ion-textarea>
   
   <ion-button color="success" expand="block" (click)="calcular()" (ionChange)="calcular()">Calcular</ion-button>
   
   <p>
   <ion-grid> 
   <ion-row>
-    <ion-col size="5" style="background-color: rgb(0, 0, 0); margin: 1px;">
+    <ion-col size="4" style="background-color: rgb(0, 0, 0); margin: 1px;">
     <font color="white">Velocidad del viento (m/s)</font>
        </ion-col>
     <ion-col style="background-color: rgb(157, 214, 130); margin: 1px;">
@@ -46,51 +55,42 @@
           <ion-col  style="background-color: rgb(157, 214, 130); margin: 1px;">
             20
              </ion-col>
-             <ion-col  style="background-color: rgb(157, 214, 130); margin: 1px;">
-              25
-               </ion-col>
 
 </ion-row> 
 
 <ion-row>
-   <ion-col size="5" style="background-color: rgb(211, 211, 211); margin: 1px;">
+   <ion-col size="4" style="background-color: rgb(211, 211, 211); margin: 1px;">
   Potencia disponible del Viento (KW)
    </ion-col>
    <ion-col style = "border: solid 1px #000000">
-    {{this.a}}
+    {{this.ar}}
   </ion-col>
  <ion-col style = "border: solid 1px #000000">
-    {{this.b}}
+    {{this.br}}
     </ion-col>
    <ion-col style = "border: solid 1px #000000">
-    {{this.c}}
+    {{this.cr}}
       </ion-col>
      <ion-col style = "border: solid 1px #000000">
-      {{this.d}}
-        </ion-col>
-        <ion-col style = "border: solid 1px #000000">
-          {{this.e}}
+      {{this.dr}}
         </ion-col>
 </ion-row>
 
 <ion-row>
-   <ion-col size="5" style="background-color: rgb(211, 211, 211); margin: 1px;">
+   <ion-col size="4" style="background-color: rgb(211, 211, 211); margin: 1px;">
   Potencia del Aerogeneador (KW)
    </ion-col>
    <ion-col style = "border: solid 1px #000000">
-    {{this.f}}
+    {{this.er}}
   </ion-col>
  <ion-col style = "border: solid 1px #000000">
-  {{this.g}}
+  {{this.fr}}
     </ion-col>
    <ion-col style = "border: solid 1px #000000">
-    {{this.h}}
+    {{this.gr}}
       </ion-col>
      <ion-col style = "border: solid 1px #000000">
-      {{this.i}}
-        </ion-col>
-        <ion-col style = "border: solid 1px #000000">
-          {{this.j}}
+      {{this.hr}}
         </ion-col>
 </ion-row> 
 </ion-grid>
