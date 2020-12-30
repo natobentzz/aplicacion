@@ -7,10 +7,17 @@
 <ion-content>
 
   <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button color="tertiary" href="#" onclick="window.open('https://www.weather.com/', '_system', 'location=yes');">
-      <ion-icon name="partly-sunny"></ion-icon>
+    <ion-fab-button>
+      <ion-icon name="grid-outline"></ion-icon>
     </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button color="tertiary" href="#" onclick="window.open('https://www.youtube.com/watch?v=XyZs1IGbk5s/', '_system', 'location=yes');"><ion-icon name="cog"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button color="tertiary" href="#" onclick="window.open('https://www.weather.com/', '_system', 'location=yes');"><ion-icon name="partly-sunny"></ion-icon></ion-fab-button>
+    </ion-fab-list>
   </ion-fab>
+
 
   <ion-grid>
     <ion-row>
@@ -23,7 +30,7 @@
             <ion-input type="number" name="V" [(ngModel)]=V></ion-input>
           
            </ion-col>
-          <ion-col size="1.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
+          <ion-col size="1.4" style="background-color: rgb(247, 210, 0); margin: 8px;">
             m/s
              </ion-col>
     </ion-row>
@@ -38,7 +45,7 @@
             <ion-input type="number" name="a" [(ngModel)]=this.a></ion-input> 
 
            </ion-col>
-          <ion-col size="2" style="background-color: rgb(247, 210, 0); margin: 8px;">
+          <ion-col size="2.2" style="background-color: rgb(247, 210, 0); margin: 8px;">
             kg/ms²
              </ion-col>
     </ion-row>
@@ -71,6 +78,9 @@
   </ion-grid>
 
   <ion-button color="success" expand="block" (click)="calcular()" (ionChange)="calcular()">Calcular</ion-button>
+  <p>
+  <img src="/assets/img/aero1.png" style="max-width:100%;width:auto;height:auto;">
+  </p>
 
 <p>
   <ion-grid>
@@ -219,6 +229,9 @@
   </ion-grid>
 </p>
 
+<p>
+  <img src="/assets/img/aero2.png" style="max-width:100%;width:auto;height:auto;">
+  </p>
 
 
 </ion-content>
