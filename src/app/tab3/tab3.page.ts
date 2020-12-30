@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-tab3',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page implements OnInit {
+  @ViewChild('barChart') barChart;
+
+  bars: any;
+  colorArray: any;
 
   densidad: 1;
   longitud: 1;
@@ -36,6 +41,10 @@ export class Tab3Page implements OnInit {
 
   constructor() {}
 
+  ionViewDidEnter() {
+    this.createBarChart();
+  }
+
   ngOnInit() {
       
   }
@@ -64,5 +73,56 @@ export class Tab3Page implements OnInit {
     this.gr = Number(this.g.toFixed(2));
     this.hr = Number(this.h.toFixed(2));
 
+    this.createBarChart();
+
   }
+
+  //Funcion Grafica Inicio
+  createBarChart() {
+    let ctx = this.barChart.nativeElement
+    ctx.height = 400;
+    this.bars = new Chart(ctx, {
+      type: 'line',
+      data: {
+        //Nombre de las etiquetas
+        labels: ['0.1', '0.2', '0.3', '0.4'],
+        datasets: [{
+          //Nombre variable
+          label: 'Del Viento',
+          //Datos
+          data: [this.a, this.b, this.c, this.d],
+          backgroundColor: 'transparent', 
+          pointBackgroundColor: 'rgb(245, 229, 27)',
+          borderColor: 'rgb(245, 229, 27)',
+          borderWidth: 1
+        },
+        {
+          //Nombre variable 2
+          label: 'Del Aerogenerador',
+          data: [this.e, this.f, this.g, this.h],
+          backgroundColor: 'transparent', 
+          borderColor: 'rgb(63, 195, 128)',
+          pointBackgroundColor: 'rgb(63, 195, 128)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            barPercentage: 0.9,
+            gridLines: {
+              offsetGridLines: true
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  }
+
+//Grafica Final
 }
